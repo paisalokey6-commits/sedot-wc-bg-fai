@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedot WC Jabodetabek - Jasa Profesional 24 Jam | Bang Fai</title>
+    <meta name="description" content="Jasa sedot WC profesional Jabodetabek 24 jam. Cepat, bersih, aman, harga transparan mulai Rp300.000. Hubungi sekarang!">
+    <meta name="keywords" content="sedot wc, sedot wc jabodetabek, sedot septic tank, saluran mampet, jasa sedot wc 24 jam">
+    <meta name="author" content="Sedot WC Bang Fai">
+
+    <!-- Schema Markup Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Sedot WC Bang Fai - Jabodetabek",
+      "description": "Jasa sedot WC profesional di area Jabodetabek, melayani 24 jam dengan peralatan modern dan harga transparan.",
+      "telephone": "+6281239567893",
+      "areaServed": ["Jakarta","Bogor","Depok","Tangerang","Bekasi"],
+      "openingHours": "Mo-Su 00:00-23:59",
+      "priceRange": "Rp200.000 - Rp1.000.000",
+      "serviceType": ["Sedot WC","Sedot Septic Tank","Pelancaran Saluran","Perbaikan Septic Tank"]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#1d4ed8',700:'#1e3a5f',800:'#152c4a',900:'#0f1f35' },
+                        accent: { 50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#22c55e',600:'#16a34a',700:'#15803d' },
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .fade-up { opacity: 0; transform: translateY(40px); transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-left { opacity: 0; transform: translateX(-40px); transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+        .fade-left.visible { opacity: 1; transform: translateX(0); }
+        .fade-right { opacity: 0; transform: translateX(40px); transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+        .fade-right.visible { opacity: 1; transform: translateX(0); }
+        .scale-in { opacity: 0; transform: scale(0.9); transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .scale-in.visible { opacity: 1; transform: scale(1); }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0f1f35 0%, #1e3a5f 40%, #1d4ed8 100%);
+        }
+
+        .glass-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -12px rgba(30, 58, 95, 0.25);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -5px rgba(34, 197, 94, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+        }
+
+        .pulse-green {
+            animation: pulseGreen 2s infinite;
+        }
+        @keyframes pulseGreen {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+            50% { box-shadow: 0 0 0 12px rgba(34, 197, 94, 0); }
+        }
+
+        .float-wa {
+            animation: floatWa 3s ease-in-out infinite;
+        }
+        @keyframes floatWa {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .counter { font-variant-numeric: tabular-nums; }
+
+        .wave-divider {
+            position: absolute; bottom: -1px; left: 0; width: 100%;
+            overflow: hidden; line-height: 0;
+        }
+        .wave-divider svg { position: relative; display: block; width: calc(100% + 1.3px); height: 60px; }
+
+        .pricing-card-featured {
+            border: 2px solid #22c55e;
+            position: relative;
+        }
+        .pricing-card-featured::before {
+            content: 'Populer';
+            position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white; font-size: 12px; font-weight: 600;
+            padding: 4px 16px; border-radius: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .wave-divider svg { height: 30px; }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 overflow-x-hidden">
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <!-- Logo -->
+                <a href="#beranda" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-500 to-accent-600 flex items-center justify-center shadow-lg">
+                        <i data-lucide="droplets" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div>
+                        <span class="font-bold text-lg text-white group-hover:text-accent-400 transition-colors leading-none block">Bang Fai</span>
+                        <span class="text-[10px] text-blue-200 tracking-wider uppercase leading-none">Sedot WC Pro</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="#beranda" class="nav-link px-3 py-2 text-sm font-medium text-blue-100 hover:text-white hover:bg-white/10 rounded-lg transition-all">Beranda</a>
+                    <a href="#layanan" class="nav-link px-3 py-2 text-sm font-medium text-blue-100 hover:text-white hover:bg-white/10 rounded-lg transition-all">Layanan</a>
+                    <a href="#area" class="nav-link px-3 py-2 text-sm font-medium text-blue-100 hover:text-white hover:bg-white/10 rounded-lg transition-all">Area Layanan</a>
+                    <a href="#harga" class="nav-link px-3 py-2 text-sm font-medium text-blue-100 hover:text-white hover:bg-white/10 rounded-lg transition-all">Harga</a>
+                    <a href="#testimoni" class="nav-link px-3 py-2 text-sm font-medium text-blue-100 hover:text-white hover:bg-white/10 rounded-lg transition-all">Testimoni</a>
+                    <a href="#faq" class="nav-link px-3 py-2 text-sm font-medium text-blue-100 hover:text-white hover:bg-white/10 rounded-lg transition-all">FAQ</a>
+                    <a href="#kontak" class="nav-link px-3 py-2 text-sm font-medium text-blue-100 hover:text-white hover:bg-white/10 rounded-lg transition-all">Kontak</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20butuh%20jasa%20sedot%20WC" target="_blank" class="btn-primary inline-flex items-center gap-2 text-white font-semibold text-sm px-6 py-2.5 rounded-full">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        Hubungi Sekarang
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden hidden bg-primary-800/98 backdrop-blur-xl border-t border-white/10">
+            <div class="px-4 py-4 space-y-1">
+                <a href="#beranda" class="mobile-nav block px-4 py-3 text-blue-100 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">Beranda</a>
+                <a href="#layanan" class="mobile-nav block px-4 py-3 text-blue-100 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">Layanan</a>
+                <a href="#area" class="mobile-nav block px-4 py-3 text-blue-100 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">Area Layanan</a>
+                <a href="#harga" class="mobile-nav block px-4 py-3 text-blue-100 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">Harga</a>
+                <a href="#testimoni" class="mobile-nav block px-4 py-3 text-blue-100 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">Testimoni</a>
+                <a href="#faq" class="mobile-nav block px-4 py-3 text-blue-100 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">FAQ</a>
+                <a href="#kontak" class="mobile-nav block px-4 py-3 text-blue-100 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">Kontak</a>
+                <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20butuh%20jasa%20sedot%20WC" target="_blank" class="block mt-2 btn-primary text-center text-white font-semibold px-4 py-3 rounded-xl">
+                    📞 Hubungi Sekarang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="beranda" class="hero-bg relative min-h-screen flex items-center overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full filter blur-[100px]"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent-400 rounded-full filter blur-[120px]"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-300 rounded-full filter blur-[150px]"></div>
+        </div>
+
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="text-center lg:text-left">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 glass-card rounded-full px-4 py-2 mb-6 fade-up">
+                        <span class="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></span>
+                        <span class="text-sm text-blue-100 font-medium">Tersedia 24 Jam — Hubungi Sekarang</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight fade-up" style="transition-delay: 0.1s">
+                        Jasa Sedot WC
+                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-300">Profesional</span>
+                        <span class="block text-3xl sm:text-4xl lg:text-5xl mt-2">Jabodetabek 24 Jam</span>
+                    </h1>
+
+                    <p class="mt-6 text-lg text-blue-200 max-w-xl mx-auto lg:mx-0 leading-relaxed fade-up" style="transition-delay: 0.2s">
+                        Cepat, bersih, aman, harga transparan — siap melayani kapan saja. Solusi terbaik untuk masalah sanitasi rumah dan bisnis Anda.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-6 mt-8 fade-up" style="transition-delay: 0.3s">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-white counter">10K+</div>
+                            <div class="text-xs text-blue-300 uppercase tracking-wider">Pelanggan</div>
+                        </div>
+                        <div class="w-px h-12 bg-white/20"></div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-white counter">24/7</div>
+                            <div class="text-xs text-blue-300 uppercase tracking-wider">Siap Melayani</div>
+                        </div>
+                        <div class="w-px h-12 bg-white/20"></div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-white counter">98%</div>
+                            <div class="text-xs text-blue-300 uppercase tracking-wider">Puas</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start fade-up" style="transition-delay: 0.4s">
+                        <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20butuh%20jasa%20sedot%20WC" target="_blank" class="btn-primary inline-flex items-center justify-center gap-2 text-white font-semibold text-lg px-8 py-4 rounded-full pulse-green">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.725-1.228A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.331 0-4.512-.636-6.388-1.742l-.458-.274-3.344.87.898-3.268-.3-.474A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+                            Chat WhatsApp
+                        </a>
+                        <a href="#harga" class="btn-secondary inline-flex items-center justify-center gap-2 text-white font-semibold text-lg px-8 py-4 rounded-full">
+                            <i data-lucide="tag" class="w-5 h-5"></i>
+                            Lihat Harga
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Illustration -->
+                <div class="hidden lg:flex justify-center items-center fade-right" style="transition-delay: 0.5s">
+                    <div class="relative">
+                        <!-- Main Circle -->
+                        <div class="w-[420px] h-[420px] rounded-full bg-gradient-to-br from-blue-400/20 to-accent-400/20 flex items-center justify-center border border-white/10">
+                            <div class="w-[340px] h-[340px] rounded-full bg-gradient-to-br from-blue-400/20 to-accent-400/10 flex items-center justify-center border border-white/10">
+                                <div class="w-[260px] h-[260px] rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm border border-white/20">
+                                    <div class="text-center">
+                                        <i data-lucide="truck" class="w-20 h-20 text-accent-400 mx-auto mb-3"></i>
+                                        <div class="text-white font-bold text-lg">Siap Datang</div>
+                                        <div class="text-accent-300 text-sm">30 Menit</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating Badges -->
+                        <div class="absolute top-8 -right-4 glass-card rounded-2xl px-4 py-3 flex items-center gap-2 animate-bounce" style="animation-duration: 3s;">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-accent-400"></i>
+                            <span class="text-white text-sm font-medium">Bergaransi</span>
+                        </div>
+                        <div class="absolute bottom-12 -left-8 glass-card rounded-2xl px-4 py-3 flex items-center gap-2 animate-bounce" style="animation-duration: 4s; animation-delay: 1s;">
+                            <i data-lucide="clock" class="w-5 h-5 text-blue-300"></i>
+                            <span class="text-white text-sm font-medium">24 Jam</span>
+                        </div>
+                        <div class="absolute top-1/2 -right-12 glass-card rounded-2xl px-4 py-3 flex items-center gap-2 animate-bounce" style="animation-duration: 3.5s; animation-delay: 0.5s;">
+                            <i data-lucide="banknote" class="w-5 h-5 text-yellow-300"></i>
+                            <span class="text-white text-sm font-medium">Harga Transparan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Divider -->
+        <div class="wave-divider">
+            <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="white" opacity=".5"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="white" opacity=".7"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="white"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== KEUNGGULAN ==================== -->
+    <section class="py-20 lg:py-28 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+                <div class="inline-flex items-center gap-2 bg-accent-50 text-accent-600 rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                    Mengapa Pilih Kami
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary-800 tracking-tight">
+                    Keunggulan Sedot WC <span class="text-accent-600">Bang Fai</span>
+                </h2>
+                <p class="mt-4 text-gray-500 text-lg">Kami berkomitmen memberikan layanan terbaik dengan standar profesional tinggi untuk setiap pelanggan.</p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-2xl p-6 shadow-sm fade-up" style="transition-delay: 0.05s">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-5">
+                        <i data-lucide="clock" class="w-7 h-7 text-primary-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg text-primary-800 mb-2">Respon Cepat 24 Jam</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Tim kami siap merespon panggilan Anda kapan saja, pagi, siang, malam, bahkan hari libur.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-2xl p-6 shadow-sm fade-up" style="transition-delay: 0.1s">
+                    <div class="w-14 h-14 rounded-2xl bg-accent-50 flex items-center justify-center mb-5">
+                        <i data-lucide="hard-hat" class="w-7 h-7 text-accent-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg text-primary-800 mb-2">Teknisi Profesional</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Tenaga kerja terlatih dan berpengalaman yang menangani setiap pekerjaan dengan standar tinggi.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-2xl p-6 shadow-sm fade-up" style="transition-delay: 0.15s">
+                    <div class="w-14 h-14 rounded-2xl bg-yellow-50 flex items-center justify-center mb-5">
+                        <i data-lucide="receipt" class="w-7 h-7 text-yellow-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg text-primary-800 mb-2">Harga Transparan</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Tanpa biaya tersembunyi. Harga dikomunikasikan di awal sebelum pekerjaan dimulai.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-2xl p-6 shadow-sm fade-up" style="transition-delay: 0.2s">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center mb-5">
+                        <i data-lucide="shield-check" class="w-7 h-7 text-purple-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg text-primary-800 mb-2">Bergaransi</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Setiap pekerjaan kami berikan garansi. Jika ada masalah, kami kembali tanpa biaya tambahan.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-2xl p-6 shadow-sm fade-up" style="transition-delay: 0.25s">
+                    <div class="w-14 h-14 rounded-2xl bg-red-50 flex items-center justify-center mb-5">
+                        <i data-lucide="wrench" class="w-7 h-7 text-red-500"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg text-primary-800 mb-2">Peralatan Modern</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Menggunakan kendaraan dan peralatan terkini untuk hasil kerja yang lebih cepat dan maksimal.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-2xl p-6 shadow-sm fade-up" style="transition-delay: 0.3s">
+                    <div class="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center mb-5">
+                        <i data-lucide="map-pin" class="w-7 h-7 text-teal-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg text-primary-800 mb-2">Area Layanan Luas</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Melayani seluruh wilayah Jabodetabek dan sekitarnya dengan jangkauan yang luas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LAYANAN ==================== -->
+    <section id="layanan" class="py-20 lg:py-28 bg-gradient-to-b from-gray-50 to-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+                <div class="inline-flex items-center gap-2 bg-primary-50 text-primary-600 rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
+                    <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                    Layanan Kami
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary-800 tracking-tight">
+                    Solusi Lengkap Masalah <span class="text-accent-600">Sanitasi</span>
+                </h2>
+                <p class="mt-4 text-gray-500 text-lg">Apapun masalah sanitasi Anda, kami punya solusinya. Layanan lengkap dan profesional.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="card-hover group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 fade-up" style="transition-delay:0.05s">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/sedotwc1/600/400.jpg" alt="Sedot WC Mampet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-accent-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Populer</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
+                                <i data-lucide="bath" class="w-5 h-5 text-primary-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg text-primary-800">Sedot WC Mampet</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Penanganan WC mampet dengan teknologi modern, cepat bersih tanpa bau tidak sedap.</p>
+                        <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20butuh%20jasa%20sedot%20WC%20mampet" target="_blank" class="inline-flex items-center gap-1 text-accent-600 font-semibold text-sm hover:text-accent-700 transition-colors">
+                            Pesan Sekarang <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="card-hover group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 fade-up" style="transition-delay:0.1s">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/saluran2/600/400.jpg" alt="Saluran Mampet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-accent-50 flex items-center justify-center">
+                                <i data-lucide="pipette" class="w-5 h-5 text-accent-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg text-primary-800">Saluran Mampet</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Pelancaran saluran air yang tersumbat di dapur, kamar mandi, atau saluran pembuangan.</p>
+                        <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20butuh%20jasa%20pelancaran%20saluran%20mampet" target="_blank" class="inline-flex items-center gap-1 text-accent-600 font-semibold text-sm hover:text-accent-700 transition-colors">
+                            Pesan Sekarang <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="card-hover group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 fade-up" style="transition-delay:0.15s">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/septictank3/600/400.jpg" alt="Sedot Septic Tank" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-yellow-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Best Seller</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-yellow-50 flex items-center justify-center">
+                                <i data-lucide="container" class="w-5 h-5 text-yellow-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg text-primary-800">Sedot Septic Tank</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Pengosongan dan pembersihan septic tank penuh secara menyeluruh dan higienis.</p>
+                        <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20butuh%20jasa%20sedot%20septic%20tank" target="_blank" class="inline-flex items-center gap-1 text-accent-600 font-semibold text-sm hover:text-accent-700 transition-colors">
+                            Pesan Sekarang <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="card-hover group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 fade-up" style="transition-delay:0.2s">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/pipa4/600/400.jpg" alt="Pelancaran Pipa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center">
+                                <i data-lucide="git-branch" class="w-5 h-5 text-purple-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg text-primary-800">Pelancaran Pipa</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Perbaikan dan pelancaran pipa yang tersumbat atau rusak dengan teknik profesional.</p>
+                        <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20butuh%20jasa%20pelancaran%20pipa" target="_blank" class="inline-flex items-center gap-1 text-accent-600 font-semibold text-sm hover:text-accent-700 transition-colors">
+                            Pesan Sekarang <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="card-hover group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 fade-up" style="transition-delay:0.25s">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/repair5/600/400.jpg" alt="Perbaikan Septic Tank" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center">
+                                <i data-lucide="hammer" class="w-5 h-5 text-red-500"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg text-primary-800">Perbaikan Septic Tank</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Renovasi dan perbaikan septic tank yang bocor, penuh, atau sudah tidak berfungsi baik.</p>
+                        <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20butuh%20jasa%20perbaikan%20septic%20tank" target="_blank" class="inline-flex items-center gap-1 text-accent-600 font-semibold text-sm hover:text-accent-700 transition-colors">
+                            Pesan Sekarang <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="card-hover group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 fade-up" style="transition-delay:0.3s">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/limbah6/600/400.jpg" alt="Limbah Domestik" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center">
+                                <i data-lucide="recycle" class="w-5 h-5 text-teal-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg text-primary-800">Limbah Domestik</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Penanganan dan pengelolaan limbah domestik untuk rumah tangga dan industri secara aman.</p>
+                        <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20butuh%20jasa%20pengelolaan%20limbah%20domestik" target="_blank" class="inline-flex items-center gap-1 text-accent-600 font-semibold text-sm hover:text-accent-700 transition-colors">
+                            Pesan Sekarang <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-12 fade-up">
+                <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20ingin%20konsultasi%20layanan" target="_blank" class="btn-primary inline-flex items-center gap-2 text-white font-semibold text-base px-8 py-4 rounded-full">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Konsultasi Gratis via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== AREA LAYANAN ==================== -->
+    <section id="area" class="py-20 lg:py-28 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+                <div class="inline-flex items-center gap-2 bg-accent-50 text-accent-600 rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
+                    <i data-lucide="map" class="w-4 h-4"></i>
+                    Jangkauan Kami
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary-800 tracking-tight">
+                    Area Layanan <span class="text-accent-600">Jabodetabek</span>
+                </h2>
+                <p class="mt-4 text-gray-500 text-lg">Kami menjangkau seluruh wilayah Jabodetabek dan daerah sekitarnya.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+                <!-- Jakarta -->
+                <div class="card-hover group relative bg-gradient-to-br from-primary-700 to-primary-900 rounded-2xl p-6 text-center overflow-hidden fade-up" style="transition-delay:0.05s">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="relative z-10">
+                        <i data-lucide="building-2" class="w-10 h-10 text-accent-400 mx-auto mb-3"></i>
+                        <h3 class="font-bold text-white text-lg">Jakarta</h3>
+                        <p class="text-blue-200 text-xs mt-1">Seluruh wilayah</p>
+                        <div class="mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="text-accent-300 text-xs font-medium">Jakarta Selatan, Barat, Timur, Utara, Pusat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bogor -->
+                <div class="card-hover group relative bg-gradient-to-br from-accent-600 to-accent-800 rounded-2xl p-6 text-center overflow-hidden fade-up" style="transition-delay:0.1s">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="relative z-10">
+                        <i data-lucide="trees" class="w-10 h-10 text-accent-200 mx-auto mb-3"></i>
+                        <h3 class="font-bold text-white text-lg">Bogor</h3>
+                        <p class="text-green-200 text-xs mt-1">Kota & Kabupaten</p>
+                        <div class="mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="text-green-200 text-xs font-medium">Bogor Tengah, Utara, Selatan, Barat, Tanah Sareal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depok -->
+                <div class="card-hover group relative bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl p-6 text-center overflow-hidden fade-up" style="transition-delay:0.15s">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="relative z-10">
+                        <i data-lucide="home" class="w-10 h-10 text-blue-200 mx-auto mb-3"></i>
+                        <h3 class="font-bold text-white text-lg">Depok</h3>
+                        <p class="text-blue-200 text-xs mt-1">Seluruh kecamatan</p>
+                        <div class="mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="text-blue-200 text-xs font-medium">Pancoran Mas, Cimanggis, Sawangan, Limo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tangerang -->
+                <div class="card-hover group relative bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl p-6 text-center overflow-hidden fade-up" style="transition-delay:0.2s">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="relative z-10">
+                        <i data-lucide="factory" class="w-10 h-10 text-purple-200 mx-auto mb-3"></i>
+                        <h3 class="font-bold text-white text-lg">Tangerang</h3>
+                        <p class="text-purple-200 text-xs mt-1">Kota & Kabupaten</p>
+                        <div class="mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="text-purple-200 text-xs font-medium">Cipondoh, Karawaci, Serpong, Cikupa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bekasi -->
+                <div class="card-hover group relative bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl p-6 text-center overflow-hidden fade-up col-span-2 md:col-span-1" style="transition-delay:0.25s">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="relative z-10">
+                        <i data-lucide="landmark" class="w-10 h-10 text-orange-200 mx-auto mb-3"></i>
+                        <h3 class="font-bold text-white text-lg">Bekasi</h3>
+                        <p class="text-orange-200 text-xs mt-1">Kota & Kabupaten</p>
+                        <div class="mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="text-orange-200 text-xs font-medium">Bekasi Timur, Barat, Selatan, Utara, Pondok Gede</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-accent-50 rounded-2xl p-6 text-center fade-up">
+                <p class="text-accent-700 font-medium flex items-center justify-center gap-2">
+                    <i data-lucide="info" class="w-5 h-5"></i>
+                    Dan melayani area sekitarnya — Cikarang, Karawang, Serang, dan lainnya
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HARGA ==================== -->
+    <section id="harga" class="py-20 lg:py-28 bg-gradient-to-b from-gray-50 to-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+                <div class="inline-flex items-center gap-2 bg-yellow-50 text-yellow-600 rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
+                    <i data-lucide="tag" class="w-4 h-4"></i>
+                    Harga Terjangkau
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary-800 tracking-tight">
+                    Daftar Harga <span class="text-accent-600">Transparan</span>
+                </h2>
+                <p class="mt-4 text-gray-500 text-lg">Harga jelas tanpa biaya tersembunyi. Dapatkan penawaran terbaik dari kami.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Pricing 1 -->
+                <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center fade-up" style="transition-delay:0.05s">
+                    <div class="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mx-auto mb-5">
+                        <i data-lucide="bath" class="w-8 h-8 text-primary-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg text-primary-800 mb-1">Sedot WC</h3>
+                    <p class="text-gray-400 text-sm mb-4">Untuk WC rumah tangga</p>
+                    <div class="mb-6">
+                        <span class="text-sm text-gray-400">Mulai dari</span>
+                        <div class="text-4xl font-bold text-primary-800 mt-1">Rp400<span class="text-lg">.000</span></div>
+                    </div>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 flex-shrink-0"></i>
+                            Proses cepat & bersih
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 flex-shrink-0"></i>
+                            Tanpa bau menyengat
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 flex-shrink-0"></i>
+                            Bergaransi
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20ingin%20pesan%20jasa%20sedot%20WC" target="_blank" class="block w-full bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 rounded-xl transition-colors">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+                <!-- Pricing 2 - Featured -->
+                <div class="card-hover pricing-card-featured bg-white rounded-2xl p-8 shadow-lg text-center scale-in relative" style="transition-delay:0.1s">
+                    <div class="w-16 h-16 rounded-2xl bg-accent-50 flex items-center justify-center mx-auto mb-5">
+                        <i data-lucide="container" class="w-8 h-8 text-accent-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg text-primary-800 mb-1">Sedot Septic Tank</h3>
+                    <p class="text-gray-400 text-sm mb-4">Pengosongan menyeluruh</p>
+                    <div class="mb-6">
+                        <span class="text-sm text-gray-400">Mulai dari</span>
+                        <div class="text-4xl font-bold text-accent-600 mt-1">Rp400<span class="text-lg">.000</span></div>
+                    </div>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 flex-shrink-0"></i>
+                            Pengosongan total
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 flex-shrink-0"></i>
+                            Pembersihan higienis
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 flex-shrink-0"></i>
+                            Bergaransi
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 flex-shrink-0"></i>
+                            Gratis konsultasi
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20ingin%20pesan%20jasa%20sedot%20septic%20tank" target="_blank" class="block w-full btn-primary text-white font-semibold py-3 rounded-xl">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+                <!-- Pricing 3 -->
+                <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center fade-up" style="transition-delay:0.15s">
+                    <div class="w-16 h-16 rounded-2xl bg-purple-50 flex items-center justify-center mx-auto mb-5">
+                        <i data-lucide="git-branch" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg text-primary-800 mb-1">Pelancaran Mampet</h3>
+                    <p class="text-gray-400 text-sm mb-4">Saluran & pipa tersumbat</p>
+                    <div class="mb-6">
+                        <span class="text-sm text-gray-400">Mulai dari</span>
+                        <div class="text-4xl font-bold text-primary-800 mt-1">Rp500<span class="text-lg">.000</span></div>
+                    </div>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 flex-shrink-0"></i>
+                            Pelancaran instan
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 flex-shrink-0"></i>
+                            Alat profesional
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 flex-shrink-0"></i>
+                            Bergaransi
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20ingin%20pesan%20jasa%20pelancaran%20mampet" target="_blank" class="block w-full bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 rounded-xl transition-colors">
+                        Pesan Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-yellow-50 border border-yellow-100 rounded-2xl p-5 text-center max-w-3xl mx-auto fade-up">
+                <p class="text-yellow-700 text-sm flex items-center justify-center gap-2">
+                    <i data-lucide="info" class="w-4 h-4 flex-shrink-0"></i>
+                    <span><strong>Catatan:</strong> Harga menyesuaikan kondisi lokasi dan tingkat pekerjaan. Hubungi kami untuk estimasi harga akurat.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONI ==================== -->
+    <section id="testimoni" class="py-20 lg:py-28 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+                <div class="inline-flex items-center gap-2 bg-yellow-50 text-yellow-600 rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
+                    <i data-lucide="star" class="w-4 h-4"></i>
+                    Testimoni
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary-800 tracking-tight">
+                    Apa Kata <span class="text-accent-600">Pelanggan</span>
+                </h2>
+                <p class="mt-4 text-gray-500 text-lg">Ribuan pelanggan puas dengan layanan kami. Berikut beberapa testimoni mereka.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testimoni 1 -->
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm fade-up" style="transition-delay:0.05s">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5">"WC rumah mampet parah, sudah dicoba macem-macem tetap mampet. Setelah hubungi Bang Fai, dalam 1 jam datang dan selesai kurang dari 2 jam. Hasilnya bersih, tidak bau, dan harganya sesuai yang ditawarkan. Recommended banget!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center">
+                            <span class="text-primary-700 font-semibold text-sm">BP</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-sm text-primary-800">Budi Prasetyo</div>
+                            <div class="text-xs text-gray-400">Jakarta Timur</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 2 -->
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm fade-up" style="transition-delay:0.1s">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5">"Septic tank rumah penuh dan sudah menggenang. Terpaksa cari jasa sedot WC dan ketemu Bang Fai. Prosesnya cepat, rapi, dan yang penting harganya fair. Anak-anak juga tidak kelihatan prosesnya jadi tidak takut. Top!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-accent-100 flex items-center justify-center">
+                            <span class="text-accent-700 font-semibold text-sm">SR</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-sm text-primary-800">Siti Rahayu</div>
+                            <div class="text-xs text-gray-400">Bekasi</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 3 -->
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm fade-up" style="transition-delay:0.15s">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5">"Saluran dapur mampet, air tidak mau turun. Sudah pakai soda api juga tidak mempan. Bang Fai datang dengan alat lengkap, selesai kurang dari 1 jam. Sekarang air lancar lagi. Terima kasih Bang Fai!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                            <span class="text-blue-700 font-semibold text-sm">AW</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-sm text-primary-800">Ahmad Wijaya</div>
+                            <div class="text-xs text-gray-400">Tangerang</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 4 -->
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm fade-up" style="transition-delay:0.2s">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5">"Saya pakai jasa Bang Fai untuk kos-kosan yang septic tank-nya penuh. Langsung datang tepat waktu, kerja rapi, dan setelah selesai bersih seperti semula. Langsung simpan kontaknya!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
+                            <span class="text-purple-700 font-semibold text-sm">DM</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-sm text-primary-800">Dewi Maharani</div>
+                            <div class="text-xs text-gray-400">Depok</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 5 -->
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm fade-up" style="transition-delay:0.25s">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5">"Malam-malam WC mampet, panik soalnya besok ada tamu. Coba hubungi Bang Fai walau sudah larut, ternyata benar-benar 24 jam! Datang cepat dan langsung beres. Pelanggan setia sekarang!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
+                            <span class="text-orange-700 font-semibold text-sm">RH</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-sm text-primary-800">Rudi Hartono</div>
+                            <div class="text-xs text-gray-400">Bogor</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 6 -->
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm fade-up" style="transition-delay:0.3s">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gray-200"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5">"Untuk kantor kami yang punya masalah limbah, Bang Fai sangat membantu. Peralatan modern dan proses kerja profesional. Kami sudah kontrak rutin untuk perawatan. Puas dengan pelayanannya."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center">
+                            <span class="text-teal-700 font-semibold text-sm">HN</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-sm text-primary-800">Hendra Nugraha</div>
+                            <div class="text-xs text-gray-400">Jakarta Selatan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section id="faq" class="py-20 lg:py-28 bg-gradient-to-b from-gray-50 to-white relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <div class="inline-flex items-center gap-2 bg-primary-50 text-primary-600 rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
+                    <i data-lucide="help-circle" class="w-4 h-4"></i>
+                    FAQ
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary-800 tracking-tight">
+                    Pertanyaan <span class="text-accent-600">Umum</span>
+                </h2>
+                <p class="mt-4 text-gray-500 text-lg">Temukan jawaban atas pertanyaan yang sering diajukan pelanggan kami.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden fade-up" style="transition-delay:0.05s">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-primary-800 pr-4">Apakah layanan tersedia 24 jam?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-500 text-sm leading-relaxed">Ya, kami melayani 24 jam penuh termasuk hari libur dan tanggal merah. Anda bisa menghubungi kami kapan saja melalui WhatsApp dan tim kami akan segera merespon.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden fade-up" style="transition-delay:0.1s">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-primary-800 pr-4">Berapa lama proses pengerjaan?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-500 text-sm leading-relaxed">Waktu pengerjaan bervariasi tergantung kondisi, namun umumnya untuk sedot WC membutuhkan waktu 1-2 jam, dan untuk pelancaran saluran sekitar 30 menit - 1 jam. Tim kami akan memberikan estimasi waktu setelah survei lokasi.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden fade-up" style="transition-delay:0.15s">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-primary-800 pr-4">Apakah melayani seluruh Jabodetabek?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-500 text-sm leading-relaxed">Ya, kami melayani seluruh wilayah Jakarta, Bogor, Depok, Tangerang, Bekasi, dan daerah sekitarnya seperti Cikarang, Karawang, dan Serang. Jangkauan kami sangat luas.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden fade-up" style="transition-delay:0.2s">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-primary-800 pr-4">Metode pembayaran apa saja yang diterima?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-500 text-sm leading-relaxed">Kami menerima pembayaran tunai, transfer bank (BCA, Mandiri, BNI, BRI), dan e-wallet (GoPay, OVO, Dana, ShopeePay). Pembayaran dilakukan setelah pekerjaan selesai dan Anda puas dengan hasilnya.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden fade-up" style="transition-delay:0.25s">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-primary-800 pr-4">Apakah ada garansi untuk pekerjaan?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-500 text-sm leading-relaxed">Tentu! Kami memberikan garansi untuk setiap pekerjaan. Jika dalam periode garansi terjadi masalah yang sama, kami akan menangani ulang tanpa biaya tambahan. Kepuasan pelanggan adalah prioritas kami.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden fade-up" style="transition-delay:0.3s">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-primary-800 pr-4">Apakah proses sedot WC menimbulkan bau?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-500 text-sm leading-relaxed">Proses kami dirancang untuk meminimalkan bau tidak sedap. Kami menggunakan peralatan modern dengan sistem vakum tertutup sehingga bau dapat dikendalikan. Setelah selesai, area akan dibersihkan dan disinfectan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA BANNER ==================== -->
+    <section class="py-16 lg:py-20 hero-bg relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 right-20 w-64 h-64 bg-accent-400 rounded-full filter blur-[100px]"></div>
+            <div class="absolute bottom-10 left-20 w-80 h-80 bg-blue-300 rounded-full filter blur-[120px]"></div>
+        </div>
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white tracking-tight mb-4 fade-up">
+                WC Mampet? Jangan Panik!
+            </h2>
+            <p class="text-lg text-blue-200 mb-8 max-w-2xl mx-auto fade-up" style="transition-delay:0.1s">
+                Hubungi Bang Fai sekarang dan masalah sanitasi Anda selesai dalam hitungan jam. Cepat, bersih, dan bergaransi!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-up" style="transition-delay:0.2s">
+                <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20butuh%20bantuan%20sedot%20WC" target="_blank" class="btn-primary inline-flex items-center justify-center gap-2 text-white font-semibold text-lg px-8 py-4 rounded-full pulse-green">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.725-1.228A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.331 0-4.512-.636-6.388-1.742l-.458-.274-3.344.87.898-3.268-.3-.474A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+                    Hubungi via WhatsApp
+                </a>
+                <a href="tel:+6281239567893" class="btn-secondary inline-flex items-center justify-center gap-2 text-white font-semibold text-lg px-8 py-4 rounded-full">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    0812-3956-7893
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== KONTAK ==================== -->
+    <section id="kontak" class="py-20 lg:py-28 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+                <div class="inline-flex items-center gap-2 bg-accent-50 text-accent-600 rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
+                    <i data-lucide="phone-call" class="w-4 h-4"></i>
+                    Hubungi Kami
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary-800 tracking-tight">
+                    Siap <span class="text-accent-600">Membantu</span> Anda
+                </h2>
+                <p class="mt-4 text-gray-500 text-lg">Jangan ragu untuk menghubungi kami. Konsultasi gratis!</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10">
+                <!-- Contact Info -->
+                <div class="space-y-6 fade-left">
+                    <!-- WhatsApp -->
+                    <div class="card-hover flex items-start gap-4 bg-gray-50 rounded-2xl p-5">
+                        <div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.725-1.228A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.331 0-4.512-.636-6.388-1.742l-.458-.274-3.344.87.898-3.268-.3-.474A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-primary-800">WhatsApp</h3>
+                            <a href="https://wa.me/6281239567893" target="_blank" class="text-accent-600 hover:text-accent-700 font-medium transition-colors">0812-3956-7893</a>
+                            <p class="text-gray-400 text-xs mt-1">Respon cepat 24 jam</p>
+                        </div>
+                    </div>
+
+                    <!-- Telepon -->
+                    <div class="card-hover flex items-start gap-4 bg-gray-50 rounded-2xl p-5">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="phone" class="w-6 h-6 text-primary-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-primary-800">Telepon</h3>
+                            <a href="tel:+6281239567893" class="text-accent-600 hover:text-accent-700 font-medium transition-colors">0812-3956-7893</a>
+                            <p class="text-gray-400 text-xs mt-1">Siap melayani kapan saja</p>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="card-hover flex items-start gap-4 bg-gray-50 rounded-2xl p-5">
+                        <div class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="mail" class="w-6 h-6 text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-primary-800">Email</h3>
+                            <a href="mailto:info@sedotwcbangfai.com" class="text-accent-600 hover:text-accent-700 font-medium transition-colors">info@sedotwcbangfai.com</a>
+                            <p class="text-gray-400 text-xs mt-1">Untuk pertanyaan & kerjasama</p>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps -->
+                    <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.65295052828!2d106.68942955!3d-6.2297419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="fade-right">
+                    <form id="contactForm" class="bg-gray-50 rounded-2xl p-6 lg:p-8 border border-gray-100">
+                        <h3 class="font-semibold text-xl text-primary-800 mb-6">Kirim Pesan</h3>
+                        
+                        <div class="space-y-5">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Nama Lengkap</label>
+                                <input type="text" id="formName" placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 outline-none transition-all text-sm bg-white">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Nomor WhatsApp</label>
+                                <input type="tel" id="formPhone" placeholder="08xxxxxxxxxx" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 outline-none transition-all text-sm bg-white">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Jenis Layanan</label>
+                                <select id="formService" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 outline-none transition-all text-sm bg-white text-gray-700">
+                                    <option value="">Pilih layanan</option>
+                                    <option value="Sedot WC Mampet">Sedot WC Mampet</option>
+                                    <option value="Saluran Mampet">Saluran Mampet</option>
+                                    <option value="Sedot Septic Tank">Sedot Septic Tank</option>
+                                    <option value="Pelancaran Pipa">Pelancaran Pipa</option>
+                                    <option value="Perbaikan Septic Tank">Perbaikan Septic Tank</option>
+                                    <option value="Limbah Domestik">Limbah Domestik</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Alamat / Lokasi</label>
+                                <input type="text" id="formAddress" placeholder="Alamat lengkap Anda" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 outline-none transition-all text-sm bg-white">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Keterangan Tambahan</label>
+                                <textarea id="formMessage" rows="3" placeholder="Deskripsikan masalah Anda..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 outline-none transition-all text-sm bg-white resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full btn-primary text-white font-semibold py-3.5 rounded-xl flex items-center justify-center gap-2 text-base">
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                                Kirim via WhatsApp
+                            </button>
+                        </div>
+
+                        <!-- Success Toast -->
+                        <div id="formToast" class="hidden mt-4 bg-accent-50 border border-accent-200 rounded-xl p-4 text-accent-700 text-sm font-medium text-center">
+                            ✅ Pesan berhasil dikirim! Tim kami akan segera menghubungi Anda.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-primary-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 30px 30px;"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-500 to-accent-600 flex items-center justify-center">
+                            <i data-lucide="droplets" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <div>
+                            <span class="font-bold text-lg text-white leading-none block">Bang Fai</span>
+                            <span class="text-[10px] text-blue-300 tracking-wider uppercase leading-none">Sedot WC Pro</span>
+                        </div>
+                    </div>
+                    <p class="text-blue-200 text-sm leading-relaxed mb-6">Jasa sedot WC profesional Jabodetabek. Cepat, bersih, aman, dan bergaransi. Melayani 24 jam nonstop.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641 0 12.017 0z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#beranda" class="text-blue-200 hover:text-accent-400 transition-colors text-sm">Beranda</a></li>
+                        <li><a href="#layanan" class="text-blue-200 hover:text-accent-400 transition-colors text-sm">Layanan</a></li>
+                        <li><a href="#area" class="text-blue-200 hover:text-accent-400 transition-colors text-sm">Area Layanan</a></li>
+                        <li><a href="#harga" class="text-blue-200 hover:text-accent-400 transition-colors text-sm">Harga</a></li>
+                        <li><a href="#testimoni" class="text-blue-200 hover:text-accent-400 transition-colors text-sm">Testimoni</a></li>
+                        <li><a href="#faq" class="text-blue-200 hover:text-accent-400 transition-colors text-sm">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Layanan -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Layanan</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#layanan" class="text-blue-200 hover:text-accent-400 transition-colors text-sm">Sedot WC Mampet</a></li>
+                        <li><a href="#layanan" class="text-blue-200 hover:text-accent-400 transition-colors text-sm">Saluran Mampet</a></li>
+                        <li><a href="#layanan" class="text-blue-200 hover:text-accent-400 transition-colors text-sm">Sedot Septic Tank</a></li>
+                        <li><a href="#layanan" class="text-blue-200 hover:text-accent-400 transition-colors text-sm">Pelancaran Pipa</a></li>
+                        <li><a href="#layanan" class="text-blue-200 hover:text-accent-400 transition-colors text-sm">Perbaikan Septic Tank</a></li>
+                        <li><a href="#layanan" class="text-blue-200 hover:text-accent-400 transition-colors text-sm">Limbah Domestik</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kontak -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Kontak</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2 text-blue-200 text-sm">
+                            <i data-lucide="phone" class="w-4 h-4 text-accent-400 flex-shrink-0"></i>
+                            <a href="tel:+6281239567893" class="hover:text-accent-400 transition-colors">0812-3956-7893</a>
+                        </li>
+                        <li class="flex items-center gap-2 text-blue-200 text-sm">
+                            <svg class="w-4 h-4 text-accent-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                            <a href="https://wa.me/6281239567893" target="_blank" class="hover:text-accent-400 transition-colors">0812-3956-7893</a>
+                        </li>
+                        <li class="flex items-center gap-2 text-blue-200 text-sm">
+                            <i data-lucide="mail" class="w-4 h-4 text-accent-400 flex-shrink-0"></i>
+                            <a href="mailto:info@sedotwcbangfai.com" class="hover:text-accent-400 transition-colors">info@sedotwcbangfai.com</a>
+                        </li>
+                        <li class="flex items-start gap-2 text-blue-200 text-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-accent-400 flex-shrink-0 mt-0.5"></i>
+                            <span>Jabodetabek, Indonesia</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20butuh%20jasa%20sedot%20WC" target="_blank" class="btn-primary inline-flex items-center gap-2 text-white font-semibold text-sm px-6 py-2.5 rounded-full mt-6">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.725-1.228A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.331 0-4.512-.636-6.388-1.742l-.458-.274-3.344.87.898-3.268-.3-.474A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+                        Chat WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-blue-300 text-sm text-center md:text-left">
+                    © 2025 Sedot WC Bang Fai — Jabodetabek. All rights reserved.
+                </p>
+                <div class="flex items-center gap-1 text-blue-300 text-sm">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-accent-400"></i>
+                    <span>Terpercaya & Bergaransi</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING WHATSAPP ==================== -->
+    <a href="https://wa.me/6281239567893?text=Halo%20Bang%20Fai%2C%20saya%20butuh%20jasa%20sedot%20WC" target="_blank" id="floatingWA" class="fixed bottom-6 right-6 z-50 float-wa group">
+        <div class="relative">
+            <div class="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center shadow-lg shadow-green-500/30 hover:bg-green-600 transition-colors">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.725-1.228A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.331 0-4.512-.636-6.388-1.742l-.458-.274-3.344.87.898-3.268-.3-.474A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            </div>
+            <!-- Tooltip -->
+            <div class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-white rounded-xl px-4 py-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                <span class="text-sm font-medium text-gray-800">Chat WhatsApp</span>
+                <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 w-2 h-2 bg-white rotate-45"></div>
+            </div>
+            <!-- Pulse Ring -->
+            <div class="absolute inset-0 rounded-full border-2 border-green-400 animate-ping opacity-30"></div>
+        </div>
+    </a>
+
+    <!-- ==================== BACK TO TOP ==================== -->
+    <button id="backToTop" class="fixed bottom-6 left-6 z-50 w-12 h-12 rounded-full bg-primary-700 hover:bg-primary-800 text-white shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 translate-y-4 pointer-events-none">
+        <i data-lucide="chevron-up" class="w-5 h-5"></i>
+    </button>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // ========= NAVBAR SCROLL EFFECT =========
+        const navbar = document.getElementById('navbar');
+        let lastScrollY = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > 50) {
+                navbar.classList.add('bg-primary-900/95', 'backdrop-blur-xl', 'shadow-lg', 'border-b', 'border-white/5');
+            } else {
+                navbar.classList.remove('bg-primary-900/95', 'backdrop-blur-xl', 'shadow-lg', 'border-b', 'border-white/5');
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        // ========= MOBILE MENU =========
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        let isMenuOpen = false;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.setAttribute('data-lucide', isMenuOpen ? 'x' : 'menu');
+            lucide.createIcons();
+        });
+
+        // Close mobile menu on nav click
+        document.querySelectorAll('.mobile-nav').forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // ========= SCROLL ANIMATIONS =========
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ========= FAQ ACCORDION =========
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const content = faqItem.querySelector('.faq-content');
+            const icon = button.querySelector('[data-lucide]');
+            const allFaqItems = document.querySelectorAll('.faq-item');
+
+            // Close all other FAQs
+            allFaqItems.forEach(item => {
+                if (item !== faqItem) {
+                    const otherContent = item.querySelector('.faq-content');
+                    const otherIcon = item.querySelector('.faq-toggle [data-lucide]');
+                    otherContent.classList.add('hidden');
+                    otherIcon.style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle current FAQ
+            content.classList.toggle('hidden');
+            if (content.classList.contains('hidden')) {
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // ========= CONTACT FORM → WHATSAPP =========
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('formName').value.trim();
+            const phone = document.getElementById('formPhone').value.trim();
+            const service = document.getElementById('formService').value;
+            const address = document.getElementById('formAddress').value.trim();
+            const message = document.getElementById('formMessage').value.trim();
+
+            if (!name || !phone) {
+                alert('Mohon isi nama dan nomor WhatsApp Anda.');
+                return;
+            }
+
+            // Build WhatsApp message
+            let waMessage = `Halo Bang Fai, saya ingin memesan jasa.\n\n`;
+            waMessage += `👤 Nama: ${name}\n`;
+            waMessage += `📱 WhatsApp: ${phone}\n`;
+            if (service) waMessage += `🔧 Layanan: ${service}\n`;
+            if (address) waMessage += `📍 Alamat: ${address}\n`;
+            if (message) waMessage += `📝 Keterangan: ${message}\n`;
+
+            const waURL = `https://wa.me/6281239567893?text=${encodeURIComponent(waMessage)}`;
+
+            // Show toast
+            const toast = document.getElementById('formToast');
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 4000);
+
+            // Open WhatsApp
+            window.open(waURL, '_blank');
+        });
+
+        // ========= BACK TO TOP =========
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+                backToTop.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                backToTop.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+                backToTop.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ========= SMOOTH SCROLL FOR ANCHOR LINKS =========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ========= NAVBAR ACTIVE STATE =========
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-white', 'bg-white/10');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-white', 'bg-white/10');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
